@@ -1,0 +1,24 @@
+.navigation {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  padding: 2.1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  min-width: 6rem;
+  text-align: center;
+}
+
+.list:hover {
+  cursor: pointer;
+}
+
+.active {
+  background-color: white;
+  color: black;
+  padding: 0.9rem;
+  border-radius: 1.4rem;
+}
