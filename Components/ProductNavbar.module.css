@@ -1,0 +1,41 @@
+.navigation {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  padding: 2.1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  min-width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-height: 2rem;
+  height: 3rem;
+  /* transition: all 0.2s; */
+}
+
+.list:hover {
+  cursor: pointer;
+  border-radius: 1.4rem;
+  background-color: rgba(207, 16, 16, 0.021);
+}
+
+.active {
+  background-color: white;
+  color: black;
+  padding: 0.9rem;
+  border-radius: 1.4rem;
+}
+
+.active:hover {
+  background-color: white;
+}
+
+.inactive {
+  filter: invert(100%) sepia(30%) saturate(1370%) hue-rotate(228deg)
+    brightness(127%) contrast(111%);
+}
