@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
 
-.wrapper {
+.wrapper-left {
   background-color: #121212;
   /* background-color: rgba(200, 200, 200, 0.329); */
   width: 80%;
@@ -8,9 +8,29 @@
   border-radius: 1rem;
   display: flex;
   overflow: hidden;
+  -webkit-box-shadow: -1px -4px 17px -1px rgba(255, 255, 255, 1);
+  -moz-box-shadow: -1px -4px 17px -1px rgba(255, 255, 255, 1);
+  box-shadow: -1px -4px 17px -9px rgba(255, 255, 255, 1);
+  transition: transform .3s;
+}
+.wrapper-right {
+  background-color: #121212;
+  /* background-color: rgba(200, 200, 200, 0.329); */
+  width: 80%;
+  height: 34rem;
+  border-radius: 1rem;
+  display: flex;
+  overflow: hidden;
+  flex-direction: row-reverse;
   -webkit-box-shadow: -1px -4px 17px -4px rgba(255, 255, 255, 1);
   -moz-box-shadow: -1px -4px 17px -4px rgba(255, 255, 255, 1);
   box-shadow: -1px -4px 17px -4px rgba(255, 255, 255, 1);
+  transition: transform .3s;
+}
+
+.wrapper-left:hover,
+.wrapper-right:hover {
+  transform: scale(1.04);
 }
 
 .content {
@@ -30,7 +50,6 @@
   font-size: 1.4rem;
   font-family: "Fira Code", monospace;
   font-optical-sizing: auto;
-  
-  font-style: normal;
 
+  font-style: normal;
 }

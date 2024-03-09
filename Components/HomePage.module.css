@@ -5,3 +5,9 @@
   flex-direction: column;
   gap: 2rem;
 }
+
+.heading {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
