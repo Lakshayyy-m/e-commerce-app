@@ -9,6 +9,8 @@ import shirtIcon from "@/assets/shirt.svg";
 import tshirtIcon from "@/assets/tshirt.svg";
 import jacketIcon from "@/assets/jacket.svg";
 import shoeIcon from "@/assets/sneakers.svg";
+import { useDispatch, useSelector } from "react-redux";
+import { productAction } from "@/store/product-page-state";
 
 const tabVariant = {
   active: {
@@ -53,7 +55,13 @@ const tabTextVariant = {
 };
 
 const ProductNavbar = () => {
-  const [activeTab, setActiveTab] = useState("all");
+  const dispatch = useDispatch();
+  const activeTab = useSelector((state) => state.activeCategory);
+
+  const changecategory = (cat) => {
+    dispatch(productAction.changecategory(cat));
+  };
+  // const [activeTab, setActiveTab] = useState("all");
   return (
     <nav className={styles.navigation}>
       <motion.li
@@ -62,7 +70,7 @@ const ProductNavbar = () => {
         className={`${styles.list} ${
           activeTab === "all" ? styles.active : styles.inactive
         }`}
-        onClick={() => setActiveTab("all")}
+        onClick={() => changecategory("all")}
         variants={tabVariant}
         animate={activeTab === "all" ? "active" : "inactive"}
       >
@@ -84,7 +92,7 @@ const ProductNavbar = () => {
         className={`${styles.list} ${
           activeTab === "shirts" ? styles.active : styles.inactive
         }`}
-        onClick={() => setActiveTab("shirts")}
+        onClick={() => changecategory("shirts")}
         variants={tabVariant}
         animate={activeTab === "shirts" ? "active" : "inactive"}
       >
@@ -106,7 +114,7 @@ const ProductNavbar = () => {
         className={`${styles.list} ${
           activeTab === "tshirt" ? styles.active : styles.inactive
         }`}
-        onClick={() => setActiveTab("tshirt")}
+        onClick={() => changecategory("tshirt")}
         variants={tabVariant}
         animate={activeTab === "tshirt" ? "active" : "inactive"}
       >
@@ -128,7 +136,7 @@ const ProductNavbar = () => {
         className={`${styles.list} ${
           activeTab === "shoes" ? styles.active : styles.inactive
         }`}
-        onClick={() => setActiveTab("shoes")}
+        onClick={() => changecategory("shoes")}
         variants={tabVariant}
         animate={activeTab === "shoes" ? "active" : "inactive"}
       >
@@ -150,7 +158,7 @@ const ProductNavbar = () => {
         className={`${styles.list} ${
           activeTab === "jacket" ? styles.active : styles.inactive
         }`}
-        onClick={() => setActiveTab("jacket")}
+        onClick={() => changecategory("jacket")}
         variants={tabVariant}
         animate={activeTab === "jacket" ? "active" : "inactive"}
       >
