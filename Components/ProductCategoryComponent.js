@@ -14,8 +14,8 @@ const ProductCategoryComponent = ({ productList }) => {
       return product.category === "T-Shirts";
     } else if (currentCategory === "jacket") {
       return product.category === "Jackets";
-    } else if (currentCategory === "shirts") {
-      return product.category === "Shirts";
+    } else if (currentCategory === "pants") {
+      return product.category === "Pants";
     } else if (currentCategory === "shoes") {
       return product.category === "Shoes";
     }

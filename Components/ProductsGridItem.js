@@ -1,10 +1,18 @@
 import React from "react";
 import styles from "./ProductsGridItem.module.css";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
-const ProductsGridItem = ({ key, product }) => {
+const ProductsGridItem = ({ key, product, index }) => {
   return (
-    <div className={styles.card} key={key}>
+    <motion.div
+      className={styles.card}
+      key={key}
+      initial={{ y: 25, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: index * 0.05 }}
+      whileHover={{ scale: 1.04, transition: { delay: 0 } }}
+    >
       <div className={styles.image}>
         <Image
           src={
@@ -20,7 +28,7 @@ const ProductsGridItem = ({ key, product }) => {
         <h3>{product.productName}</h3>
         <p>${product.price}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

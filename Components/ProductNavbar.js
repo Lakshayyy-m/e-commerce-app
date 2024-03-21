@@ -2,15 +2,17 @@
 
 import React, { useState } from "react";
 import styles from "./ProductNavbar.module.css";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import allIcon from "@/assets/all-inclusive.svg";
-import shirtIcon from "@/assets/shirt.svg";
+import pantIcon from "@/assets/trousers.svg";
 import tshirtIcon from "@/assets/tshirt.svg";
 import jacketIcon from "@/assets/jacket.svg";
 import shoeIcon from "@/assets/sneakers.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { productAction } from "@/store/product-page-state";
+
+//!gotta fix the animation shit
 
 const tabVariant = {
   active: {
@@ -61,55 +63,57 @@ const ProductNavbar = () => {
   const changecategory = (cat) => {
     dispatch(productAction.changecategory(cat));
   };
-  // const [activeTab, setActiveTab] = useState("all");
+
   return (
     <nav className={styles.navigation}>
-      <motion.li
+      <li
         layout="size"
         transition={{ duration: 2 }}
         className={`${styles.list} ${
           activeTab === "all" ? styles.active : styles.inactive
         }`}
         onClick={() => changecategory("all")}
-        variants={tabVariant}
-        animate={activeTab === "all" ? "active" : "inactive"}
+        // variants={tabVariant}
+        initial={{ width: "auto" }}
+        animate={{ width: "auto" }}
+        // animate={activeTab === "all" ? "active" : "inactive"}
       >
         <Image src={allIcon} alt="All" width={30} />
         {activeTab === "all" ? (
-          <motion.div
+          <div
             variants={tabTextVariant}
             animate={activeTab === "all" ? "active" : "inactive"}
           >
             {" "}
             ALL{" "}
-          </motion.div>
+          </div>
         ) : (
           ""
         )}
-      </motion.li>
-      <motion.li
+      </li>
+      <li
         layout="size"
         className={`${styles.list} ${
-          activeTab === "shirts" ? styles.active : styles.inactive
+          activeTab === "pants" ? styles.active : styles.inactive
         }`}
-        onClick={() => changecategory("shirts")}
+        onClick={() => changecategory("pants")}
         variants={tabVariant}
-        animate={activeTab === "shirts" ? "active" : "inactive"}
+        animate={activeTab === "pants" ? "active" : "inactive"}
       >
-        <Image src={shirtIcon} alt="Shirts" width={30} />
-        {activeTab === "shirts" ? (
-          <motion.div
+        <Image src={pantIcon} alt="Shirts" width={30} />
+        {activeTab === "pants" ? (
+          <div
             variants={tabTextVariant}
-            animate={activeTab === "shirts" ? "active" : "inactive"}
+            animate={activeTab === "pants" ? "active" : "inactive"}
           >
             {" "}
-            SHIRTS{" "}
-          </motion.div>
+            PANTS{" "}
+          </div>
         ) : (
           ""
         )}
-      </motion.li>
-      <motion.li
+      </li>
+      <li
         layout="size"
         className={`${styles.list} ${
           activeTab === "tshirt" ? styles.active : styles.inactive
@@ -120,18 +124,18 @@ const ProductNavbar = () => {
       >
         <Image src={tshirtIcon} alt="Tshirt" width={30} />
         {activeTab === "tshirt" ? (
-          <motion.div
+          <div
             variants={tabTextVariant}
             animate={activeTab === "tshirt" ? "active" : "inactive"}
           >
             {" "}
             T-SHIRT{" "}
-          </motion.div>
+          </div>
         ) : (
           ""
         )}
-      </motion.li>
-      <motion.li
+      </li>
+      <li
         layout="size"
         className={`${styles.list} ${
           activeTab === "shoes" ? styles.active : styles.inactive
@@ -142,18 +146,18 @@ const ProductNavbar = () => {
       >
         <Image src={shoeIcon} alt="Shoes" width={30} />
         {activeTab === "shoes" ? (
-          <motion.div
+          <div
             variants={tabTextVariant}
             animate={activeTab === "shoes" ? "active" : "inactive"}
           >
             {" "}
             SHOES{" "}
-          </motion.div>
+          </div>
         ) : (
           ""
         )}
-      </motion.li>
-      <motion.li
+      </li>
+      <li
         layout="size"
         className={`${styles.list} ${
           activeTab === "jacket" ? styles.active : styles.inactive
@@ -164,17 +168,17 @@ const ProductNavbar = () => {
       >
         <Image src={jacketIcon} alt="Jacket" width={30} />
         {activeTab === "jacket" ? (
-          <motion.div
+          <div
             variants={tabTextVariant}
             animate={activeTab === "jacket" ? "active" : "inactive"}
           >
             {" "}
             JACKET{" "}
-          </motion.div>
+          </div>
         ) : (
           ""
         )}
-      </motion.li>
+      </li>
     </nav>
   );
 };

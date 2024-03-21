@@ -1,6 +1,7 @@
 import React from "react";
 import ProductsGridItem from "./ProductsGridItem";
 import styles from "./ProductsGrid.module.css";
+import { motion } from "framer-motion";
 
 const ProductsGrid = ({ productList }) => {
   const uniqueProductsList = [];
@@ -17,8 +18,10 @@ const ProductsGrid = ({ productList }) => {
 
   return (
     <div className={styles.grid}>
-      {uniqueProductsList.map((product) => (
-        <ProductsGridItem key={product.id} product={product} />
+      {uniqueProductsList.map((product, index) => (
+        <div key={Math.random()}>
+          <ProductsGridItem key={product.id} product={product} index={index} />
+        </div>
       ))}
     </div>
   );
