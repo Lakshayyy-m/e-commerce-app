@@ -1,8 +1,4 @@
-.main {
-  height: 88%;
-}
-
-.loginComponent {
-  width: 100%;
-  height: 100%;
+.wrapper{
+    padding: 1rem;
+    padding-block: 2rem;
 }

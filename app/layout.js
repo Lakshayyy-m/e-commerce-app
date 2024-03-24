@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import LoginHeader from "@/Components/LoginHeader";
 import ProductStoreProvider from "@/store/ProductStoreProvider";
 import { getServerSession } from "next-auth";
 import MySessionProvider from "@/Components/SessionProvider";
+import MainHeader from "@/Components/MainHeader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +20,7 @@ export default async function RootLayout({ children }) {
       <body className={inter.className}>
         <MySessionProvider session={session}>
           <ProductStoreProvider>
-            <LoginHeader />
+            <MainHeader />
             {children}
           </ProductStoreProvider>
         </MySessionProvider>

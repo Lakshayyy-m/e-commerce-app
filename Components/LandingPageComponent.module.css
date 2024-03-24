@@ -1,0 +1,58 @@
+.main {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1540' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1050%26quot%3b)' fill='none'%3e%3cpath d='M -3.754233508846312%2c355 C 92.25%2c333.4 284.25%2c228.6 476.2457664911537%2c247 C 668.25%2c265.4 764.25%2c462.2 956.2457664911537%2c447 C 1148.25%2c431.8 1244.25%2c156.6 1436.2457664911537%2c171 C 1628.25%2c185.4 1915.49%2c531.8 1916.2457664911537%2c519 C 1917%2c506.2 1535.25%2c189.4 1440%2c107' stroke='rgba(51%2c 121%2c 194%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -739.726208279596%2c288 C -643.73%2c237.8 -451.73%2c-5 -259.726208279596%2c37 C -67.73%2c79 28.27%2c486.4 220.273791720404%2c498 C 412.27%2c509.6 508.27%2c85.2 700.273791720404%2c95 C 892.27%2c104.8 1032.33%2c515.4 1180.273791720404%2c547 C 1328.22%2c578.6 1388.05%2c311.8 1440%2c253' stroke='rgba(51%2c 121%2c 194%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -929.4340255770392%2c421 C -833.43%2c351.6 -641.43%2c76.6 -449.4340255770391%2c74 C -257.43%2c71.4 -161.43%2c393.6 30.565974422960892%2c408 C 222.57%2c422.4 318.57%2c144.8 510.5659744229609%2c146 C 702.57%2c147.2 804.68%2c421.4 990.5659744229608%2c414 C 1176.45%2c406.6 1350.11%2c170 1440%2c109' stroke='rgba(51%2c 121%2c 194%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -105.43187641883128%2c457 C -9.43%2c382 182.57%2c63.8 374.5681235811687%2c82 C 566.57%2c100.2 662.57%2c513.6 854.5681235811687%2c548 C 1046.57%2c582.4 1142.57%2c262.4 1334.5681235811687%2c254 C 1526.57%2c245.6 1793.48%2c505.8 1814.5681235811687%2c506 C 1835.65%2c506.2 1514.91%2c305.2 1440%2c255' stroke='rgba(51%2c 121%2c 194%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1050'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  padding-block: 3rem;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.row {
+  display: flex;
+}
+.col-md-6 {
+  width: 50%;
+  padding-inline: 3rem;
+}
+.col-md-4 {
+  width: 33%;
+  padding-inline: 3rem;
+}
+.right {
+  float: right;
+}
+
+.video {
+  padding: 6px;
+  background-color: black;
+  width: 85%;
+  border-radius: 1.5rem;
+}
+
+.product-disc {
+  margin-block: 2rem;
+}
+.product-disc h2 {
+  font-size: 3rem;
+}
+.product-disc p {
+  color: #ffffff9c;
+}
+
+.button {
+  padding-inline: 2.5rem;
+  padding-block: 0.7rem;
+  border-radius: 8px;
+  border: none;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.161);
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+  scale: 1.04;
+}

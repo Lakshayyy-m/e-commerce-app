@@ -100,7 +100,7 @@ const ProductNavbar = () => {
         variants={tabVariant}
         animate={activeTab === "pants" ? "active" : "inactive"}
       >
-        <Image src={pantIcon} alt="Shirts" width={30} />
+        <Image src={pantIcon} alt="Pants" width={30} />
         {activeTab === "pants" ? (
           <div
             variants={tabTextVariant}

@@ -22,8 +22,8 @@ const homePageProducts = [
       "https://crepdogcrew.com/cdn/shop/products/image_9a61c3ad-a6e0-4fd3-b95d-9e9b7fb35a3e_1000x.jpg?v=1628321972",
   },
   {
-    id: "shirts",
-    title: "SHIRTS",
+    id: "pants",
+    title: "PANTS",
     content: `Step into style and comfort with our exquisite collection of shoes.
       From timeless classics to contemporary trends, our curated selection
       caters to every taste. Stay ahead of the fashion curve with our

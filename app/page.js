@@ -1,29 +1,9 @@
-"use client";
-
-import Image from "next/image";
+import React from "react";
 import styles from "./page.module.css";
-import { useState, useEffect } from "react";
-import Login from "@/Components/Login";
-import { AnimatePresence, motion } from "framer-motion";
-import { connectDatabase } from "@/lib/products";
+import HomePageComponent from "@/Components/HomePage";
 
-export default function Home() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+const HomePage = () => {
+  return <HomePageComponent />;
+};
 
-
-  return (
-    <main className={styles.main}>
-      <AnimatePresence>
-        {!isLoggedIn && (
-          <motion.div
-            className={styles.loginComponent}
-            key="loginComponent"
-            exit={{ opacity: 0 }}
-          >
-            <Login changeLoginStatus={setIsLoggedIn} />
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </main>
-  );
-}
+export default HomePage;

@@ -17,7 +17,7 @@ const ProductAccordianItem = (props) => {
       <div className={styles.content}>
         <h1>{props.title}</h1>
         <p>{props.content}</p>
-        <Link href={"home/products"}>Shop for {props.id}...</Link>
+        <Link href={"/products"}>Shop for {props.id}...</Link>
       </div>
     </div>
   );
