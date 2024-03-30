@@ -4,9 +4,6 @@ const nextConfig = {
   images: {
     domains: ["crepdogcrew.com"],
   },
-  experimental: {
-    serverActions: true,
-  },
 };
 
 export default withNextVideo(nextConfig);

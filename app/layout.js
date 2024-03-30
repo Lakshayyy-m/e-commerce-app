@@ -4,6 +4,7 @@ import ProductStoreProvider from "@/store/ProductStoreProvider";
 import { getServerSession } from "next-auth";
 import MySessionProvider from "@/Components/SessionProvider";
 import MainHeader from "@/Components/MainHeader";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default async function RootLayout({ children }) {
           <ProductStoreProvider>
             <MainHeader />
             {children}
+            <Toaster position="top-right" />
           </ProductStoreProvider>
         </MySessionProvider>
       </body>

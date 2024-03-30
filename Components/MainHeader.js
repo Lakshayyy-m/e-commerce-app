@@ -28,7 +28,14 @@ const AuthVerifyContent = () => {
 
   return (
     <>
-      <button onClick={() => signIn()} className={styles.button}>
+      <button
+        onClick={() =>
+          signIn("google", {
+            callbackUrl: `${window.location.origin}/verification/address`,
+          })
+        }
+        className={styles.button}
+      >
         Sign In
       </button>
     </>
@@ -38,7 +45,7 @@ const AuthVerifyContent = () => {
 const MainHeader = () => {
   return (
     <nav className={styles.navigation}>
-      <h1>Armaanjot and works</h1>
+      <h1>Sultaan and works</h1>
       <AuthVerifyContent />
     </nav>
   );

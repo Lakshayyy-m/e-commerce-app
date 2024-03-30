@@ -1,6 +1,8 @@
 import NextAuth from "next-auth";
 import GoogleProivder from "next-auth/providers/google";
 
+//todo preventing authenticated users from accessing the login page
+
 export const authOptions = {
   providers: [
     GoogleProivder({
@@ -8,16 +10,6 @@ export const authOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
-  callbacks: {
-    async signIn({ profile, account }) {
-      console.log(account);
-
-      return true;
-    },
-    async session({ session, user }) {
-      return session;
-    },
-  },
 };
 
 export const handler = NextAuth(authOptions);
