@@ -5,6 +5,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 import ProductNavbar from "@/Components/ProductNavbar";
+import Loading from "./loading";
 
 const ProductsPage = async () => {
   const session = await getServerSession(authOptions);
@@ -17,8 +18,7 @@ const ProductsPage = async () => {
     <>
       <ProductNavbar />
       <main className={styles.main}>
-        <h1>Content....</h1>
-        <Suspense fallback={<p>Loading.....</p>}>
+        <Suspense fallback={<Loading />}>
           <Products />
         </Suspense>
       </main>

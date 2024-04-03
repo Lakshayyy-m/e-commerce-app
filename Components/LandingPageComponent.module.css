@@ -24,12 +24,20 @@
 .video {
   padding: 6px;
   background-color: black;
-  width: 85%;
+  width: 95%;
+  height: 400px;
   border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-disc {
   margin-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
 }
 .product-disc h2 {
   font-size: 3rem;

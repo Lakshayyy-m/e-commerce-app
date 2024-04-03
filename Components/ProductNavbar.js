@@ -4,11 +4,6 @@ import React, { useState } from "react";
 import styles from "./ProductNavbar.module.css";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import allIcon from "@/assets/all-inclusive.svg";
-import pantIcon from "@/assets/trousers.svg";
-import tshirtIcon from "@/assets/tshirt.svg";
-import jacketIcon from "@/assets/jacket.svg";
-import shoeIcon from "@/assets/sneakers.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { productAction } from "@/store/product-page-state";
 
@@ -78,7 +73,7 @@ const ProductNavbar = () => {
         animate={{ width: "auto" }}
         // animate={activeTab === "all" ? "active" : "inactive"}
       >
-        <Image src={allIcon} alt="All" width={30} />
+        <Image src={"/assets/all-inclusive.svg"} alt="All" width={30} height={40} />
         {activeTab === "all" ? (
           <div
             variants={tabTextVariant}
@@ -100,7 +95,7 @@ const ProductNavbar = () => {
         variants={tabVariant}
         animate={activeTab === "pants" ? "active" : "inactive"}
       >
-        <Image src={pantIcon} alt="Pants" width={30} />
+        <Image src={"/assets/trousers.svg"} alt="Pants" width={30} height={40} />
         {activeTab === "pants" ? (
           <div
             variants={tabTextVariant}
@@ -122,7 +117,7 @@ const ProductNavbar = () => {
         variants={tabVariant}
         animate={activeTab === "tshirt" ? "active" : "inactive"}
       >
-        <Image src={tshirtIcon} alt="Tshirt" width={30} />
+        <Image src={"/assets/tshirt.svg"} alt="Tshirt" width={30} height={40} />
         {activeTab === "tshirt" ? (
           <div
             variants={tabTextVariant}
@@ -144,7 +139,7 @@ const ProductNavbar = () => {
         variants={tabVariant}
         animate={activeTab === "shoes" ? "active" : "inactive"}
       >
-        <Image src={shoeIcon} alt="Shoes" width={30} />
+        <Image src={"/assets/sneakers.svg"} alt="Shoes" width={30} height={40} />
         {activeTab === "shoes" ? (
           <div
             variants={tabTextVariant}
@@ -166,7 +161,7 @@ const ProductNavbar = () => {
         variants={tabVariant}
         animate={activeTab === "jacket" ? "active" : "inactive"}
       >
-        <Image src={jacketIcon} alt="Jacket" width={30} />
+        <Image src={"/assets/jacket.svg"} alt="Jacket" width={30} height={40} />
         {activeTab === "jacket" ? (
           <div
             variants={tabTextVariant}

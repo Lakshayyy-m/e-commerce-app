@@ -20,7 +20,11 @@ const ProductsGrid = ({ productList }) => {
     <div className={styles.grid}>
       {uniqueProductsList.map((product, index) => (
         <div key={Math.random()}>
-          <ProductsGridItem key={product.id} product={product} index={index} />
+          <ProductsGridItem
+            key={product.productId}
+            product={product}
+            index={index}
+          />
         </div>
       ))}
     </div>

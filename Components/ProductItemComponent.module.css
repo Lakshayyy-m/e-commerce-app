@@ -1,0 +1,121 @@
+.main {
+  width: 100vw;
+  display: flex;
+  height: 80%;
+  gap: 6%;
+}
+
+.left {
+  display: flex;
+  flex-basis: 45%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.image {
+  border-radius: 1rem;
+}
+
+.productName {
+  font-size: 3rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-basis: 45%;
+  gap: 2rem;
+}
+
+.manufacturer {
+  font-size: 1.7rem;
+  color: rgba(255, 255, 255, 0.301);
+}
+
+.description {
+  font-size: 1.3rem;
+  width: 60%;
+  color: rgba(255, 255, 255, 0.301);
+  display: flex;
+  gap: 2rem;
+}
+
+.price {
+  font-size: 1.7rem;
+}
+
+.quantCart {
+  width: 80%;
+  display: flex;
+  gap: 1.98rem;
+  justify-content: space-between;
+}
+
+.counter {
+  flex-basis: 50%;
+  border-radius: 1.6rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
+  border: 2px solid white;
+}
+
+.addCart {
+  background-color: transparent;
+  border: none;
+  border-radius: 1.6rem;
+  flex-basis: 50%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  align-items: center;
+  transition: background-color 0.4s;
+}
+
+.addCart:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.minus,
+.plus {
+  background-color: transparent;
+  border: none;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(286deg)
+    brightness(104%) contrast(103%);
+}
+
+.plus:hover,
+.minus:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+}
+
+.size {
+  background-color: transparent;
+  font-size: 1.3rem;
+  border: none;
+  color: rgba(255, 255, 255, 0.301);
+}
+
+.size:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.activeSize {
+  color: white;
+}
+
+.goBack {
+  position: absolute;
+  left: 30px;
+  top: 120px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(286deg)
+    brightness(104%) contrast(103%);
+}
