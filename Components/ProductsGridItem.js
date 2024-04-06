@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const ProductsGridItem = ({ product, index }) => {
-
-
   if (!product.imageUrl.startsWith("https")) {
     product.imageUrl = "/assets/image-product-1.jpg";
   }
@@ -22,11 +20,11 @@ const ProductsGridItem = ({ product, index }) => {
         <div className={styles.image}>
           <picture>
             <img
-             src={product.imageUrl}
-             alt="Product Image"
-             width={200}
-             height={200}
-             className={styles.image}
+              src={product.imageUrl.trim()}
+              alt="Product Image"
+              width={200}
+              height={200}
+              className={styles.image}
             />
           </picture>
         </div>
