@@ -1,7 +1,6 @@
 import NextAuth from "next-auth";
 import GoogleProivder from "next-auth/providers/google";
 
-//todo preventing authenticated users from accessing the login page
 
 export const authOptions = {
   providers: [
